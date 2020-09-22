@@ -1,0 +1,30 @@
+def inputs():
+    name = input('Your name: ')
+    age = input('Your age: ')
+    city = input('Your city: ')
+    print('{}, {} years old, lives in {}'.format(name, age, city))
+
+
+#inputs()
+
+numbers = []
+
+#for i in range(3):
+    #number = int(input('Введите число: '))
+    #numbers.append(number)
+
+#print(max(numbers))
+
+
+player1 = input('Игрок 1 комманды введите имя: ')
+player1key = {'name': player1, 'health': 100, 'damage': 20, 'armor': 1.2}
+player2 = input('Игрок 2 комманды введите имя: ')
+player2key = {'name': player2, 'health': 100, 'damage': 15, 'armor': 1.8}
+
+def fight(play1, play2):
+    play2['health'] = play2['health'] - (play1['damage']/play1['armor'])
+    print('{} нанес игроку {} {} урона!'.format(play1['name'], play2['name'], play1['damage']/play1['armor']))
+
+fight(player1key, player2key)
+
+print(player2key)
